@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Roboto;
+  src: url('../assets/Roboto.ttf');
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../assets/PlayfairDisplay.ttf');
+}
+
+body {
+  font-family: Roboto;
+}
+
+h1,
+h2,
+h3,
+figcaption {
+  font-family: 'Playfair Display';
+}
