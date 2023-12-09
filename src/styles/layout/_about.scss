@@ -1,0 +1,93 @@
+@use '../abstracts';
+
+.about {
+  padding: 5rem 0;
+  position: relative; // For ::before element acting as background
+
+  &__inner {
+    @include abstracts.centralize;
+  }
+
+  &__title {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  &__description {
+    margin-bottom: 1rem;
+  }
+
+  &__social-media-links {
+    justify-content: center;
+  }
+
+  // Acts as background
+  &::before {
+    background-color: abstracts.$background;
+    box-shadow: abstracts.$shadow;
+    content: ' ';
+    height: 50%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: skewY(-10deg);
+    transform-origin: bottom left;
+    width: 100%;
+    z-index: -1;
+  }
+
+  @media (min-width: 600px) {
+    &__inner {
+      padding: 3.5rem 0 0; // 2.5rem picture caption size + 1rem gap
+      position: relative; // For picture caption
+    }
+
+    &__picture {
+      float: left;
+      margin-right: 1rem;
+      width: 50%;
+    }
+
+    &__content {
+      background-color: abstracts.$light;
+      box-shadow: abstracts.$shadow;
+      padding: 1rem;
+      padding-right: 1.5rem;
+    }
+
+    &__social-media-links {
+      display: none;
+    }
+
+    &::before {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 900px) {
+    &__inner {
+      display: flex;
+      padding: 0;
+    }
+
+    &__title {
+      text-align: left;
+    }
+
+    &__picture {
+      float: none;
+      margin: 0;
+      width: 40%;
+    }
+
+    &__content {
+      margin: 2rem 0;
+      width: 60%;
+    }
+
+    &__social-media-links {
+      display: flex;
+      justify-content: right;
+    }
+  }
+}
