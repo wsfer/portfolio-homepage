@@ -1,5 +1,50 @@
+@use '../abstracts';
+
 .project-card {
+  box-shadow: abstracts.$shadow;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__image {
+    aspect-ratio: 1 / 1;
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &__content {
+    display: grid;
+    flex: 1;
+    gap: 1rem;
+    grid-template-areas:
+      'title title links'
+      'desc  desc  desc';
+    grid-template-rows: auto 1fr;
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.65rem;
+    grid-area: links;
+    justify-content: right;
+  }
+
+  &__description {
+    grid-area: desc;
+  }
+
   &__icon {
     width: 1.5rem;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 }
