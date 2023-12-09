@@ -4,8 +4,8 @@
   width: 80%;
 }
 
-@mixin responsive-grid($min-size) {
+@mixin responsive-grid($min-size, $gap) {
   display: grid;
-  gap: 2rem;
+  gap: $gap;
   grid-template-columns: repeat(auto-fill, minmax($min-size, 1fr));
 }

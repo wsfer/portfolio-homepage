@@ -1,0 +1,21 @@
+@use '../abstracts';
+
+.projects {
+  padding: 5rem 0;
+
+  &__inner {
+    @include abstracts.centralize;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__list {
+    @include abstracts.responsive-grid($min-size: min(300px, 80vw), $gap: 2rem);
+  }
+
+  &__item {
+    align-self: stretch;
+  }
+}
