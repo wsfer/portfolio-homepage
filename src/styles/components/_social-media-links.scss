@@ -1,7 +1,13 @@
 .social-media-links {
   display: flex;
+  gap: 1rem;
 
   &__icon {
     width: 2rem;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
   }
 }
