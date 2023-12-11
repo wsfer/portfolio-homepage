@@ -2,7 +2,7 @@ import socialMediaLinks from './socialMediaLinks';
 import mainImage from '../assets/images/placeholder-1.jpg';
 
 const aboutTemplate = `
-  <section class="about">
+  <section class="about" id="about">
     <div class="about__inner">
       <picture class="about__picture picture">
         <img class="picture__image" src=${mainImage} alt="Lorem ipsum" />

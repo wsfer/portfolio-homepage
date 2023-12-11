@@ -11,7 +11,7 @@ const temporaryProduct = {
 };
 
 const projectsTemplate = `
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="projects__inner">
         <h2 class="projects__title">My work</h2>
         <ul class="projects__list">

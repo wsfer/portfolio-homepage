@@ -2,7 +2,7 @@ import socialMediaLinks from './socialMediaLinks';
 import footerImage from '../assets/images/placeholder-2.jpg';
 
 const footerTemplate = `
-  <footer class="footer">
+  <footer class="footer" id="contact">
     <div class="footer__inner">
       <div class="footer__content">
         <h2 class="footer__title">Contact me</h2>
