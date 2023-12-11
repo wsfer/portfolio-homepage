@@ -1,0 +1,45 @@
+@use '../abstracts';
+
+.header {
+  background-color: abstracts.$background;
+  // This gradient fix contrast issues with accessibility
+  background-image: linear-gradient(
+    to bottom,
+    rgb(19, 19, 19, 0.6),
+    rgb(19, 19, 19, 0.2)
+  );
+
+  &__nav {
+    @include abstracts.centralize;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    padding: 1em 0;
+  }
+
+  &__link {
+    color: abstracts.$light;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &::after {
+      border-bottom: 0.1em solid abstracts.$light;
+      content: '';
+      display: block;
+      transition: width 0.25s ease-in-out;
+      width: 0;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
