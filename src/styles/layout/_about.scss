@@ -74,6 +74,10 @@
       text-align: left;
     }
 
+    &__description {
+      font-size: clamp(1rem, 1.5vw, 2rem);
+    }
+
     &__picture {
       float: none;
       margin: 0;
@@ -81,7 +85,7 @@
     }
 
     &__content {
-      margin: 2rem 0;
+      margin: auto 0;
       width: 60%;
     }
 
